@@ -147,7 +147,7 @@ export class SlickLogin extends LitElement {
           </div>
         </div>
         <div class="container-action">
-          <button onclick=${this._onConnect}>
+          <button @click=${this._onConnect}>
             ${this.buttonText}
           </button>
         </div>
