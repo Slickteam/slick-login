@@ -76,7 +76,7 @@ Name                | Type               | Description
 `hideLogo`          | Boolean            | Hide the logo header div if not needed
 `imgSrc`            | String             | The path to the image that will be displayed as the header
 
-###Events
+### Events
 
 Name            | Description
 ---             | ---
