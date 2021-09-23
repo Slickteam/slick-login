@@ -1,10 +1,8 @@
 import {LitElement, html, customElement, property, css} from 'lit-element'
 
 /**
- * An example element.
+ * An authentication web component
  *
- * @slot - This element has a slot
- * @csspart button - The button
  */
 @customElement('slick-login')
 export class SlickLogin extends LitElement {
@@ -88,7 +86,7 @@ export class SlickLogin extends LitElement {
         padding: 10px 30px;
       }
     }
-  `
+  `;
 
   /**
    * A boolean property to show some usage hints in the console
@@ -129,13 +127,13 @@ export class SlickLogin extends LitElement {
   render() {
     return html`
       <div class="container">
-        ${ this.hideLogo ? 
-            html`` : 
+        ${this.hideLogo ?
+            html`` :
             html`
               <div class="container-header">
                 <img class="fit" src="${this.imgSrc}" alt="The logo you want to display as the header of the card">
               </div>
-            ` }
+            `}
         <div class="container-body">
           <div class="input">
             <label for="username">${this.firstLabel}</label>
@@ -152,7 +150,6 @@ export class SlickLogin extends LitElement {
           </button>
         </div>
       </div>
-      <slot></slot>
     `
   }
 
@@ -176,9 +173,6 @@ export class SlickLogin extends LitElement {
     return this.shadowRoot!.getElementById('password')! as HTMLInputElement;
   }
 
-  foo(): string {
-    return 'foo'
-  }
 }
 
 declare global {
