@@ -2,6 +2,8 @@
 
 ## Description
 
+![Capture d’écran de 2021-09-23 09-11-25](https://user-images.githubusercontent.com/59962729/134505863-843ffafb-46ec-470d-b21d-68c79f75248c.png)
+
 An authentication card that return's an event with a payload that contains both input's content. The web component was made using lit element.
 
 ## Installation
