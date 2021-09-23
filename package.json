@@ -1,9 +1,16 @@
 {
   "name": "@slickteam/slick-login",
-  "version": "0.1.0",
-  "main": "dist/my-element.es.js",
+  "version": "0.1.5",
+  "author": "Theo Le Visage",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Slickteam/slick-login/issues"
+  },
+  "homepage": "https://github.com/Slickteam/slick-login#readme",
+  "main": "dist/slick-login.es.js",
+  "module": "dist/slick-login.es.js",
   "exports": {
-    ".": "./dist/my-element.es.js"
+    ".": "./dist/slick-login.es.js"
   },
   "types": "types/my-element.d.ts",
   "files": [
@@ -38,12 +45,8 @@
     "slickteam",
     "slick-login",
     "login",
-    "card"
-  ],
-  "author": "Theo Le Visage",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/Slickteam/slick-login/issues"
-  },
-  "homepage": "https://github.com/Slickteam/slick-login#readme"
+    "card",
+    "web",
+    "component"
+  ]
 }

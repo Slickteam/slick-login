@@ -1,8 +1,4 @@
-import {LitElement, html, customElement, property, css, unsafeCSS} from 'lit-element'
-
-const image = require('./SLICKTEAM-A3.png')
-const path = require('path')
-const filepath = path.resolve(image);
+import {LitElement, html, customElement, property, css} from 'lit-element'
 
 /**
  * An example element.
@@ -94,46 +90,64 @@ export class SlickLogin extends LitElement {
   `
 
   /**
-   * The username linked to the first input
-   */
-  @property({ type: String })
-  username = ''
-
-  /**
-   * The password linked to the second input
+   * A boolean property to show some usage hints in the console
    */
   @property({ type: Boolean })
   showConsoleHelp = true
 
   /**
-   * The button's color format must be ^#([A-F|a-f|0-9]{6}|[A-F|a-f|0-9]{3})$
+   * The first's input label defaults to username
    */
   @property({type: String})
-  buttonColor = '#FFF'
+  firstLabel = 'Username'
 
-  getButtonColor() {
-    return css`${unsafeCSS(this.buttonColor)}`
-  }
+  /**
+   * The first's input label defaults to password
+   */
+  @property({type: String})
+  secondLabel = 'Password'
+
+  /**
+   * The button's label defaults to Sign in
+   */
+  @property({type: String})
+  buttonText = 'Sign in'
+
+  /**
+   * A boolean property to hide the header's logo if needed
+   */
+  @property({type: Boolean})
+  hideLogo = false
+
+  /**
+   * The header's image path
+   */
+  @property({type: String})
+  imgSrc = ''
 
   render() {
     return html`
       <div class="container">
-        <div class="container-header">
-          <img class="fit" src="${filepath}" alt="The logo you want to display as the header of the card">
-        </div>
+        ${ this.hideLogo ? 
+            html`` : 
+            html`
+              <div class="container-header">
+                <img class="fit" src="${this.imgSrc}" alt="The logo you want to display as the header of the card">
+              </div>
+            ` }
         <div class="container-body">
           <div class="input">
-            <label for="username">Identifiant</label>
-            <input id="username" type="text" placeholder="Identifiant">
+            <label for="username">${this.firstLabel}</label>
+            <input id="username" type="text" placeholder="${this.firstLabel}">
           </div>
           <div class="input">
-            <label for="password">Mot de passe</label>
+            <label for="password">${this.secondLabel}</label>
             <input id="password" type="password" placeholder="******************">
           </div>
         </div>
         <div class="container-action">
-          <button @click=${this._onConnect}>
-            Se connecter
+          <button onclick=${this._onConnect}>
+            ${this.buttonText}
           </button>
         </div>
       </div>

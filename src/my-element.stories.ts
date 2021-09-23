@@ -5,21 +5,33 @@ export default {
     title: 'SlickLogin',
     component: 'slick-login',
     argTypes: {
-        username: { control: 'text' },
-        password: { control: 'text' },
+        showConsoleHelp: { control: 'boolean' },
+        firstLabel: { control: 'text' },
+        secondLabel: { control: 'text' },
+        buttonText: { control: 'text' },
+        hideLogo: { control: 'boolean' },
+        imgSrc: { control: 'text' },
         onClick: { action: 'onClick' }
     }
 };
 
 
 function Template({
-                    username= '',
-                    password=''
+                      showConsoleHelp= true,
+                      firstLabel='Username',
+                      secondLabel='Password',
+                      buttonText='Connexion',
+                      hideLogo= false,
+                      imgSrc='./SLICKTEAM-A3.png',
                   }) {
     return html`
         <slick-login
-               .username=${username}
-               .password=${password}
+                .showConsoleHelp=${showConsoleHelp}
+                .firstLabel=${firstLabel}
+                .secondLabel=${secondLabel}
+                .buttonText=${buttonText}
+                .hideLogo=${hideLogo}
+                .imgSrc=${imgSrc}
         ></slick-login>
     `;
 }
