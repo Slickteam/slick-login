@@ -20,7 +20,7 @@ function Template({
                       showConsoleHelp= true,
                       firstLabel='Username',
                       secondLabel='Password',
-                      buttonText='Connexion',
+                      buttonText='Sign in',
                       hideLogo= false,
                       imgSrc='./SLICKTEAM-A3.png',
                   }) {
