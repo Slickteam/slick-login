@@ -14,6 +14,7 @@ export class SlickLogin extends LitElement {
       font-family: Gill Sans, sans-serif;
     }
     .container {
+      background: #FFF;
       margin: auto;
       width: 20%;
       box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
