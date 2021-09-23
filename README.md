@@ -1,6 +1,6 @@
 # \<slick-login>
 
-##Description
+## Description
 
 An authentication card that return's an event with a payload that contains both input's content. The web component was made using lit element.
 
