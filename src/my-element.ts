@@ -14,7 +14,6 @@ export class SlickLogin extends LitElement {
     .container {
       background: #FFF;
       margin: auto;
-      width: 20%;
       box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
       border-radius: 4px;
     }
@@ -70,7 +69,6 @@ export class SlickLogin extends LitElement {
       font-size: 16px;
       font-weight: 550;
       outline: none;
-      padding: 10px 25px;
       text-align: center;
       transform: translateY(0);
       transition: transform 150ms, box-shadow 150ms;
@@ -81,10 +79,37 @@ export class SlickLogin extends LitElement {
       box-shadow: rgba(0, 0, 0, .15) 0 3px 9px 0;
       transform: translateY(-2px);
     }
-    @media (min-width: 768px) {
+    
+    @media (min-width: 600px) {
       button {
         padding: 10px 30px;
       }
+    }
+    
+    @media (min-width: 1600px) {
+      .container { 
+        width: 650px;
+      }
+      
+      input {
+        margin: 10px 0 25px 0;
+      }
+      
+      button {
+        width: 100%;
+      }
+    }
+    
+    @media (min-width: 600px) and (max-width: 1599px) {
+      .container { 
+        width: 400px;
+      }
+    }
+    
+    @media (max-width: 599px) {
+      .container { 
+          width: 95%;
+        }
     }
   `;
 
