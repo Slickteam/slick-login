@@ -68,7 +68,6 @@ export class SlickLogin extends LitElement {
       outline: none;
       padding: 5px 10px;
       text-align: center;
-      transform: translateY(0);
       transition: transform 150ms, box-shadow 150ms;
     }
 
