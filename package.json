@@ -1,6 +1,6 @@
 {
   "name": "@slickteam/slick-login",
-  "version": "1.0.1-1",
+  "version": "1.0.1-2",
   "author": "Theo Le Visage",
   "license": "MIT",
   "bugs": {
@@ -12,7 +12,7 @@
   "exports": {
     ".": "./dist/slick-login.es.js"
   },
-  "types": "types/my-element.d.ts",
+  "types": "types/slick-login.d.ts",
   "files": [
     "dist",
     "types"

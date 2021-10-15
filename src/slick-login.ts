@@ -176,13 +176,8 @@ export class SlickLogin extends LitElement {
   }
 
   private _onConnect() {
-    if (this.showConsoleHelp) {
-      console.log(`Event 'slick-connect' emitted`)
-      console.log(`${this.usernameInput.value ? `First input value : ${this.usernameInput.value}` : 'No value entered in first input'}`)
-      console.log(`${this.passwordInput.value ? `Second input value : ${this.passwordInput.value}` : 'No value entered in second input'}`)
-    }
     const event = new CustomEvent('slick-connect', { bubbles: true, detail: { username: this.usernameInput.value, password: this.passwordInput.value } });
-    dispatchEvent(event);
+    this.dispatchEvent(event);
   }
 
   // @ts-ignore

@@ -1,5 +1,5 @@
 import { html } from 'lit-html';
-import './my-element.ts';
+import './slick-login.ts';
 
 export default {
     title: 'SlickLogin',
