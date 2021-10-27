@@ -6,6 +6,7 @@ import {LitElement, html, customElement, property, css} from 'lit-element'
  */
 @customElement('slick-login')
 export class SlickLogin extends LitElement {
+
   static styles = css`    
     .container {
       display: block;
@@ -146,6 +147,9 @@ export class SlickLogin extends LitElement {
   @property({type: String})
   imgSrc = ''
 
+  @property({type: String})
+  passwordAreaId = 'password'
+
   render() {
     return html`
       <div class="container">
@@ -162,8 +166,8 @@ export class SlickLogin extends LitElement {
             <input id="username" type="text" placeholder="${this.firstLabel}">
           </div>
           <div class="input">
-            <label for="password">${this.secondLabel}</label>
-            <input id="password" type="password" placeholder="******************">
+            <label for="${this.passwordAreaId}">${this.secondLabel}</label>
+            <input id="${this.passwordAreaId}" type="password" placeholder="******************">
           </div>
         </div>
         <div class="container-action">
@@ -178,6 +182,14 @@ export class SlickLogin extends LitElement {
   private _onConnect() {
     const event = new CustomEvent('slick-connect', { bubbles: true, detail: { username: this.usernameInput.value, password: this.passwordInput.value } });
     this.dispatchEvent(event);
+  }
+
+  firstUpdated() {
+    this.shadowRoot?.getElementById(this.passwordAreaId)?.addEventListener('keydown', event => {
+      if(event.key === "Enter") {
+        this._onConnect();
+      }
+    });
   }
 
   // @ts-ignore
