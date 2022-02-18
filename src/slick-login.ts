@@ -53,7 +53,7 @@ export class SlickLogin extends LitElement {
     label {
       color: #5e5e5e;
       font-weight: 550;
-      font-size: 12;
+      font-size: 12px;
     }
     
     button {
@@ -114,40 +114,40 @@ export class SlickLogin extends LitElement {
   /**
    * A boolean property to show some usage hints in the console
    */
-  @property({ type: Boolean })
+  @property({ type: Boolean, attribute: 'show-console-help' })
   showConsoleHelp = true
 
   /**
    * The first's input label defaults to username
    */
-  @property({type: String})
+  @property({type: String, attribute: 'first-label'})
   firstLabel = 'Username'
 
   /**
    * The first's input label defaults to password
    */
-  @property({type: String})
+  @property({type: String, attribute: 'second-label'})
   secondLabel = 'Password'
 
   /**
    * The button's label defaults to Sign in
    */
-  @property({type: String})
+  @property({type: String, attribute: 'button-text'})
   buttonText = 'Sign in'
 
   /**
    * A boolean property to hide the header's logo if needed
    */
-  @property({type: Boolean})
+  @property({type: Boolean, attribute: 'hide-logo'})
   hideLogo = false
 
   /**
    * The header's image path
    */
-  @property({type: String})
+  @property({type: String, attribute: 'img-src'})
   imgSrc = ''
 
-  @property({type: String})
+  @property({type: String, attribute: 'password-area-id'})
   passwordAreaId = 'password'
 
   render() {

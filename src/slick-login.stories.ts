@@ -26,12 +26,12 @@ function Template({
                   }) {
     return html`
         <slick-login
-                .showConsoleHelp=${showConsoleHelp}
-                .firstLabel=${firstLabel}
-                .secondLabel=${secondLabel}
-                .buttonText=${buttonText}
-                .hideLogo=${hideLogo}
-                .imgSrc=${imgSrc}
+                .show-console-help=${showConsoleHelp}
+                .first-label=${firstLabel}
+                .second-label=${secondLabel}
+                .button-text=${buttonText}
+                .hide-logo=${hideLogo}
+                .img-src=${imgSrc}
         ></slick-login>
     `;
 }
